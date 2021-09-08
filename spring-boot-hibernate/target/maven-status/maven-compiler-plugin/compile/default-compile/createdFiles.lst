@@ -1,0 +1,8 @@
+com\sematec\controller\UserController.class
+com\sematec\service\impl\UserServiceImpl.class
+com\sematec\service\UserService.class
+com\sematec\dao\impl\UserDaoImpl.class
+com\sematec\CustomPhysicalNamingStrategy.class
+com\sematec\dao\UserDao.class
+com\sematec\model\UserDetails.class
+com\sematec\Application.class
