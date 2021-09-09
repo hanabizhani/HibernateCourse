@@ -197,7 +197,7 @@ SET @@default_storage_engine = 'MyISAM';
 /*!50610 SET @@default_storage_engine = 'InnoDB'*/;
 
 CREATE TABLE film_text (
-  film_id SMALLINT UNSIGNED NOT NULL,
+  film_id SMALLINT NOT NULL,
   title VARCHAR(255) NOT NULL,
   description TEXT,
   PRIMARY KEY  (film_id),
