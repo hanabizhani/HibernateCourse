@@ -3,6 +3,7 @@ package com.sematec.model;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
+import java.util.List;
 
 @Entity
 @Table(name = "film", schema = "sakila", catalog = "")
@@ -18,6 +19,14 @@ public class FilmEntity {
     private RatingEnum rating;
     private SpecialFeaturesEnum specialFeatures;
     private Timestamp lastUpdate;
+
+    //(TBL:film onetomany TBL:film_actor)
+    @OneToMany(mappedBy = "filmActor_film", cascade = CascadeType.ALL)
+    private List films;
+
+    //(TBL:film_text onetoone TBL:film)
+    @OneToOne(mappedBy = "filmText_film", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private FilmTextEntity filmText;
 
     @Id
     @Column(name = "film_id")

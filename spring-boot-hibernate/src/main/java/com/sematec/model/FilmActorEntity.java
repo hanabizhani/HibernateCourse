@@ -2,6 +2,7 @@ package com.sematec.model;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.List;
 
 @Entity
 @Table(name = "film_actor", schema = "sakila", catalog = "")
@@ -10,6 +11,18 @@ public class FilmActorEntity {
     private short actorId;
     private short filmId;
     private Timestamp lastUpdate;
+
+
+    //fk_film_actor_film (TBL:film onetomany TBL:film_actor)
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "film_id")
+    private FilmActorEntity filmActor_film;
+
+    //fk_film_actor_actor(TBL:actor onetomany TBL:film_actor)
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "actor_id")
+    private FilmActorEntity filmActor_actor;
+
 
     @Id
     @Column(name = "actor_id")

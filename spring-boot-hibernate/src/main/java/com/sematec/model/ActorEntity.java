@@ -2,6 +2,7 @@ package com.sematec.model;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.List;
 
 @Entity
 @Table(name = "actor", schema = "sakila", catalog = "")
@@ -10,6 +11,10 @@ public class ActorEntity {
     private String firstName;
     private String lastName;
     private Timestamp lastUpdate;
+
+    //(TBL:actor onetomany TBL:film_actor)
+    @OneToMany(mappedBy = "filmActor_actor", cascade = CascadeType.ALL)
+    private List actors;
 
     @Id
     @Column(name = "actor_id")
