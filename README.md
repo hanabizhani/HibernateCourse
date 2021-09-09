@@ -1,9 +1,15 @@
-## Hibenate Course
-### Behsazan_HibernateCourse
+## Behsazan HibernateCourse
 
-> branch onetomany : hibernate one-to-many bidirectional association
+#### Excersise 1:  hibernate bidirectional association
 
-    //fk_film_actor_film (TBL:film **onetomany** TBL:film_actor)
-    //fk_film_actor_actor(TBL:actor **onetomany** TBL:film_actor)
-    //fk_film_text_film(TBL:film_text **onetoone** TBL:film)
+List of relations in database:
+
+- Table film has `one to many` relation with  film_actor (fk name: fk_film_actor_film)
+        ![film_actor_film]([https://github.com/hanabizhani/HibernateCourse/blob/main/sakila-db/relations/film_actor_film.jpg])
+
+- Table actor ha `one to many` relation with  film_actor (fk name: fk_film_actor_actor)
+  ![film_actor_actor]([https://github.com/hanabizhani/HibernateCourse/blob/main/sakila-db/relations/film_actor_actor.jpg])
+
+- Table film_text ha `one to one` relation with  film (fk name: fk_film_text_film)
+  ![film_text_film]([https://github.com/hanabizhani/HibernateCourse/blob/main/sakila-db/relations/film_text_film.jpg])
 
