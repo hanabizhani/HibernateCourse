@@ -1,7 +1,7 @@
 ## Behsazan HibernateCourse
 ![Behsazan HibernateCourse](https://hibernate.org/images/hibernate-logo.svg)
 
-![](https://cdn-icons-png.flaticon.com/128/2113/2113824.png)**Excersise 1:  hibernate bidirectional association**
+![](https://cdn-icons-png.flaticon.com/128/2113/2113824.png)**Exercise 1:  hibernate bidirectional association**
 
 List of relations in database:
 
@@ -30,7 +30,7 @@ List of relations in database:
 
 
 
-![](https://cdn-icons-png.flaticon.com/128/2113/2113824.png) **Excersise 2:  hibernate @orphanRemoval**
+![](https://cdn-icons-png.flaticon.com/128/2113/2113824.png) **Exercise 2:  hibernate @orphanRemoval**
 @orphanRemoval is added to :
 - [FilmEntity.java](https://github.com/hanabizhani/HibernateCourse/blob/main/spring-boot-hibernate/src/main/java/com/sematec/model/FilmEntity.java)
 - [ActorEntity.java](https://github.com/hanabizhani/HibernateCourse/blob/main/spring-boot-hibernate/src/main/java/com/sematec/model/ActorEntity.java)
