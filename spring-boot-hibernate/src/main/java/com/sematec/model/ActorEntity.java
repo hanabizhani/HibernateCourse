@@ -13,7 +13,10 @@ public class ActorEntity {
     private Timestamp lastUpdate;
 
     //(TBL:actor onetomany TBL:film_actor)
-    @OneToMany(mappedBy = "filmActor_actor", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "filmActor_actor",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true , fetch =
+            FetchType.LAZY)
     private List actors;
 
     @Id

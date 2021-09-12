@@ -21,11 +21,17 @@ public class FilmEntity {
     private Timestamp lastUpdate;
 
     //(TBL:film onetomany TBL:film_actor)
-    @OneToMany(mappedBy = "filmActor_film", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "filmActor_film",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true,
+            fetch = FetchType.LAZY)
     private List films;
 
     //(TBL:film_text onetoone TBL:film)
-    @OneToOne(mappedBy = "filmText_film", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "filmText_film",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true,
+            fetch = FetchType.LAZY)
     private FilmTextEntity filmText;
 
     @Id
