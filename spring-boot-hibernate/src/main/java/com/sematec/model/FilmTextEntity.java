@@ -10,7 +10,7 @@ public class FilmTextEntity {
     private String description;
 
     //fk_film_text_film(TBL:film_text onetoone TBL:film)
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "film_id")
     private FilmEntity filmEntity;
 

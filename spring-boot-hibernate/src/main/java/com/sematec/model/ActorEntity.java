@@ -15,8 +15,8 @@ public class ActorEntity {
     //(TBL:actor onetomany TBL:film_actor)
     @OneToMany(mappedBy = "filmActor_actor",
             cascade = CascadeType.ALL,
-            orphanRemoval = true , fetch =
-            FetchType.LAZY)
+            orphanRemoval = true ,
+            fetch = FetchType.LAZY)
     private List actors;
 
     @Id
