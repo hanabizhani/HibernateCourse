@@ -1,10 +1,13 @@
 package com.sematec.model;
 
+import org.hibernate.envers.Audited;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.List;
 
 @Entity
+@Audited(withModifiedFlag = true)
 @Table(name = "actor", schema = "sakila", catalog = "")
 public class ActorEntity {
     private short actorId;
@@ -41,6 +44,7 @@ public class ActorEntity {
 
     @Basic
     @Column(name = "last_name")
+    @Audited
     public String getLastName() {
         return lastName;
     }
